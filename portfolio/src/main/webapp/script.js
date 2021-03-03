@@ -15,6 +15,12 @@
 /**
  * Adds a random greeting to the page.
  */
+async function displayMessage(){
+    const responseFromServer = await fetch('hello');
+    const textFromresponse = await responseFromServer.text();
+    const textConatiner = document.getElementById('message-container');
+    textConatiner.innerText = textFromresponse;
+}
 function addRandomGreeting() {
   const greetings =
       ['Hard work beats talent when talents fails to work hard', 'Never give up', 'Fly high'];
