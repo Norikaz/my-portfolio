@@ -17,18 +17,17 @@
  */
 async function displayMessage(){
     const responseFromServer = await fetch('hello');
-    const textFromresponse = await responseFromServer.text();
-    const textConatiner = document.getElementById('message-container');
-    textConatiner.innerText = textFromresponse;
+    const list = await responseFromServer.json();
+    // const textConatiner = document.getElementById('message-container');
+    // textConatiner.innerText = list;
+    addRandomMessage(list);
 }
-function addRandomGreeting() {
-  const greetings =
-      ['Hard work beats talent when talents fails to work hard', 'Never give up', 'Fly high'];
+function addRandomMessage(list) {
 
   // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const random_text = list[Math.floor(Math.random() * list.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const messageContainer = document.getElementById('message-container');
+  messageContainer.innerText = random_text;
 }
