@@ -1,9 +1,30 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+body, html {
+  height: 100%;
+  margin: 0;
 }
-
+#content {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  left: 16px;
+}
 #greeting-container {
   margin-top: 20px;
+}
+#wallpaper{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+#socials{
+    width:100px;
+    height:90px;
+}
+p2{
+    padding-top: 40px;
+    color: #52aaf2;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
 }
