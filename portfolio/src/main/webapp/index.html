@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArcujV5COiarpU9VtuPWU8pJ1p5B9qGgs"></script>
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="createMap()">
     
     <div id="content">
       <h1>Norik's Portfolio</h1>
@@ -26,6 +27,7 @@
       <p id="message-container"></p>
       <p>Click <a href="/hello">here</a> to view content from a servlet.</p>
     </div>
+    <div id="map"></div>
     <img src="/images/spring.gif" id="wallpaper">
   </body>
 </html>
