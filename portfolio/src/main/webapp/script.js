@@ -32,7 +32,16 @@ function addRandomMessage(list) {
   messageContainer.innerText = random_text;
 }
 function createMap(){
+    const Tokyo = {lat:35.686, lng: 139.774}
     const map = new google.maps.Map(
-        document.getElementById("map"),
-        {center:{lat: 37.422, lng: -122.084}, zoom: 16});
+        document.getElementById("map"),{
+        center:Tokyo, 
+        zoom: 4
+    });
+    const marker = new google.maps.Marker({
+        position:Tokyo,
+        map:map,
+        title:"Want to visit"
+    });
+
 }
